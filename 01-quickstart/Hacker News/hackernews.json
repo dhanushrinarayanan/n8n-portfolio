@@ -1,1 +1,62 @@
-
+{
+  "name": "Hacker News",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "85e10bbe-a43f-4728-9262-39d3121cd02d",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "resource": "all",
+        "limit": 10,
+        "additionalFields": {
+          "keyword": "automation"
+        }
+      },
+      "type": "n8n-nodes-base.hackerNews",
+      "typeVersion": 1,
+      "position": [
+        208,
+        0
+      ],
+      "id": "9e495580-c8ef-46e3-a272-e75215457045",
+      "name": "Hacker News",
+      "notesInFlow": true,
+      "notes": "Get the 10 latest articles"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "Hacker News",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "availableInMCP": false
+  },
+  "versionId": "efa1e333-0a30-48a0-8347-cef913034138",
+  "meta": {
+    "instanceId": "6981ac3a67e3aa59db74a24a0e6f52345deef0cec469e7f23695ff61d618f2e3"
+  },
+  "nodeGroups": [],
+  "id": "zIZBLNtiVQdhPJ06",
+  "tags": []
+}
